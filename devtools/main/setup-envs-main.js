@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const envfile = require('envfile')
-const templateEnvFile = envfile.parse(fs.readFileSync('./.env.template').toString())
+const templateEnvFile = envfile.parse(fs.readFileSync('./.env').toString())
 
 let NEXT_MINT_PRICE_SOL, NEXT_PUBLIC_CANDY_MACHINE_ID, NEXT_PUBLIC_CANDY_START_DATE, NEXT_PUBLIC_TREASURY_ADDRESS, NEXT_PUBLIC_CANDY_MACHINE_CONFIG
 

@@ -9,7 +9,9 @@ import Footer from '../components/footer';
 import useWalletBalance from '../hooks/use-wallet-balance';
 import { shortenAddress } from '../utils/candy-machine';
 import Countdown from 'react-countdown';
+
 import { RecaptchaButton } from '../components/recaptcha-button';
+import {react} from "@babel/types";
 
 const Home = () => {
   const [balance] = useWalletBalance()
@@ -32,13 +34,13 @@ const Home = () => {
       <div className="flex flex-col justify-center items-center flex-1 space-y-3 mt-20">
         <img
           className="rounded-md shadow-lg"
-          src={`/candy.jpeg`}
+          src={`/soltoon.gif`}
           height={200}
           width={200}
           alt="Candy Image" />
 
         <span className="text-gray-800 font-bold text-2xl cursor-default">
-          THIS IS THE BEST CANDY MACHINE EVER
+          SolToons NFT Vending Machine
         </span>
 
         {!wallet.connected && <span
@@ -59,8 +61,7 @@ const Home = () => {
 
         <div className="flex flex-col justify-start items-start">
           {wallet.connected &&
-            <RecaptchaButton
-              actionName="mint"
+            <button
               disabled={isSoldOut || isMinting || !isActive}
               onClick={onMint}
             >
@@ -75,12 +76,11 @@ const Home = () => {
                   renderer={renderCounter}
                 />
               }
-            </RecaptchaButton>
+            </button>
           }
 
           {wallet.connected &&
-            <RecaptchaButton
-              actionName="mint5"
+            <button
               disabled={isSoldOut || isMinting || !isActive}
               onClick={() => onMintMultiple(5)}
             >
@@ -95,7 +95,7 @@ const Home = () => {
                   renderer={renderCounter}
                 />
               }
-            </RecaptchaButton>
+            </button>
           }
         </div>
         <Footer />
