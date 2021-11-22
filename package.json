@@ -2,6 +2,7 @@
   "name": "candy-factory",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://financialblock.github.io/solana-candy-factory/",
   "scripts": {
     "#WEBAPP#": "---",
     "dev": "next dev",
@@ -17,7 +18,9 @@
     "setup-solana-main": "./devtools/main/setup-solana-main.sh",
     "setup-metaplex-main": "node ./devtools/main/setup-metaplex-main.js",
     "setup-envs-main": "node ./devtools/main/setup-envs-main.js",
-    "deploy-mainnet": "yarn setup-solana-main && yarn setup-metaplex-main && yarn setup-envs-main"
+    "deploy-mainnet": "yarn setup-solana-main && yarn setup-metaplex-main && yarn setup-envs-main",
+    "predeoploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
