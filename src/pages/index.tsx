@@ -27,7 +27,9 @@ const Home = () => {
         <title>Solana Candy Factory</title>
         <meta name="description" content="Solana blockchain candy machine app boilerplate on top of Metaplex Candy Machine. NextJS, Tailwind, Anchor, SolanaLabs.React, dev/mainnet automation scripts." />
         <link rel="icon" href="/favicon.ico" />
+
       </Head>
+
 
       <Header />
 
