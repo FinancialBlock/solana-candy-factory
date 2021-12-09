@@ -3,15 +3,14 @@
 @tailwind utilities;
 
 * {
-  box-sizing: border-box;
+  box-sizing:content-box;
 }
 
 html,
 body,
 #__next {
-  background-color: lightblue;
-  height: 100%;
-  width : 100%;
+  background-color: whitesmoke;
+  background-size: cover;
 }
 
 #icon-eye {
@@ -20,4 +19,11 @@ body,
   padding : 20px;
   overflow: auto;
   color   : white;
+}
+body {
+  background-color: #282c34;
+  color: white;
+  padding: 40px;
+  font-family: Arial;
+  text-align: center;
 }

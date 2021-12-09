@@ -19,8 +19,9 @@
     "setup-metaplex-main": "node ./devtools/main/setup-metaplex-main.js",
     "setup-envs-main": "node ./devtools/main/setup-envs-main.js",
     "deploy-mainnet": "yarn setup-solana-main && yarn setup-metaplex-main && yarn setup-envs-main",
-    "predeoploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
+    "deploy:ar": "arweave deploy-dir build --key-file "
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -46,13 +47,16 @@
     "patch-package": "^6.4.7",
     "postinstall-postinstall": "^2.1.0",
     "react": "17.0.2",
+    "react-clear-cache": "^1.4.12",
     "react-code-blocks": "^0.0.9-0",
     "react-countdown": "^2.3.2",
     "react-dom": "17.0.2",
     "react-google-recaptcha-v3": "^1.9.5",
     "react-hot-toast": "^2.1.1",
     "react-is": "^17.0.2",
-    "react-share": "^4.4.0"
+    "react-refresh": "^0.11.0",
+    "react-share": "^4.4.0",
+    "watch": "^1.0.2"
   },
   "devDependencies": {
     "@types/react": "17.0.30",
